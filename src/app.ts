@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import morgan from "morgan";
 import "dotenv/config";
 import bodyParser from "body-parser";
 import publicRoutes from "./publicRoutes";
@@ -28,7 +27,6 @@ app.use((req, res, next) => {
   }
 });
 
-app.use(morgan("dev"));
 app.use(publicRoutes);
 
 const port = process.env.PORT || 3001;
