@@ -1,8 +1,4 @@
 export default class Pokemon {
-  public is_hidden: boolean;
-
-  public slot: number;
-
   public ability: {
     name: string;
     url: string;
