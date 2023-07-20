@@ -1,1 +1,1 @@
-a
+E documentação da otimização do serviço, via AWS com menor latencia, menor custo e maior disponibilidade

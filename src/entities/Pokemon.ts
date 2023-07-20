@@ -1,17 +1,21 @@
 export default class Pokemon {
-  public name: string;
+  public is_hidden: boolean;
 
-  public url: string;
+  public slot: number;
 
+  public ability: {
+    name: string;
+    url: string;
+  };
   constructor(props: Pokemon) {
-    const { name, url } = props;
+    const { ability } = props;
 
-    if (!name || name.length === 0) {
-      throw new Error("User: Pokemon name is invalid.");
+    if (!ability.name || ability.name.length === 0) {
+      throw new Error("User: Pokemon ability name is invalid.");
     }
 
-    if (!url || url.length === 0) {
-      throw new Error("User: Pokemon url is invalid.");
+    if (!ability.url || ability.url.length === 0) {
+      throw new Error("User: Pokemon ability url is invalid.");
     }
 
     Object.assign(this, props);
